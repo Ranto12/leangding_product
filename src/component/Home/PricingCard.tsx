@@ -12,8 +12,8 @@ const PricingCard = ({
   return (
     <div className={`rounded-xl border border-teal-600/40 drop-shadow-xl flex flex-col p-4 lg:p-8 gap-12 ${title === "Plus" ? "bg-teal-900/30" : "bg-teal-900/30"}`}>
       <div className="">
-        <h2 className="text-neutral-50">Mobil Avanza</h2>
-        <p className="text-neutral-200">23.000</p>
+        <h2 className="text-neutral-50">{title}</h2>
+        <p className="text-neutral-200">{price}</p>
       </div>
       <div className="border-t border-teal-600/40"></div>
       <div className="text-neutral-200 flex flex-col gap-2">
@@ -35,7 +35,7 @@ const PricingCard = ({
       </div>
       <button className="bg-neutral-300/10 hover:bg-neutral-400/10 border border-teal-600/40 text-neutral-50 px-3 py-2 rounded-lg flex items-center gap-2 justify-center cursor-pointer hover:border-teal-500/40 duration-200 ease-in-out">
       Get Started{" "}
-      {title === "Plush" ? (
+      {title === "Plus" ? (
         <svg
         xmlns="http://www.w3.org/2000/svg"
         width="20"

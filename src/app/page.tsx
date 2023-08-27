@@ -33,7 +33,7 @@ export default function Home() {
             href="#"
             className="bg-teal-900/30 border border-teal-600/40 text-neutral-50 px-3 py-2 rounded-full flex items-center self-start lg:self-center gap-4 hover:border-teal-500/40 duration-300 ease-out"
           >
-            <p>Lorem, ipsum dolor.</p>
+            <p>Halaman Utama, Perusahaan</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -47,19 +47,16 @@ export default function Home() {
             </svg>
           </a>
           <motion.h1
-            className="text-transparent lg:text-center bg-gradient-to-b from-neutral-50 from-10% via-teal-200 via-70% to-95% to-emerald-400 bg-clip-text"
+            className="text-transparent lg:text-center bg-gradient-to-b from-neutral-50 from-10% via-teal-200 via-70% to-95% to-emerald-400 bg-clip-text leading-none lg:w-2/3"
             variants={FADE_DOWN_ANIMATION_VARIANTS}
           >
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita,
-            dolorem!
+           Internet dengan kecepatan sangat kencang dan murah hanya ada di netBus
           </motion.h1>
           <motion.p
             className="text-neutral-200 text-xl lg:text-center font-[450] w-full lg:w-3/4"
             variants={FADE_DOWN_ANIMATION_VARIANTS}
           >
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt
-            quis minus labore repellat est accusamus quo voluptate, assumenda
-            officia laboriosam.
+            
           </motion.p>
           <motion.div
             className="flex gap-4 mt-4 lg:mt-0 justify-start lg:justify-center lg:items-center w-full"
@@ -227,7 +224,7 @@ export default function Home() {
             quidem dolor.
           </p>
         </div>
-        <ContactFrom/>
+        <ContactFrom />
       </section>
     </main>
   );
