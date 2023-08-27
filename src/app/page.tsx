@@ -206,7 +206,7 @@ export default function Home() {
         <div className="flex flex-col justify-center items-center gap-4">
           <h2 className="lg:w-1/2 text-center text-neutral-50 leading-none lg:mt-16">
             {" "}
-            Still not convinced? Let's talk{" "}
+            Still not convinced? Lets talk{" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="44"
