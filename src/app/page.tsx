@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import { pricings } from "@/data/priceData";
 import PricingCard from "@/component/Home/PricingCard";
 import ContactFrom from "@/component/Home/ContactFrom";
+import { Keunggulan } from "@/data/keunggulan";
+import iconsos from '../assets/svg/24jam.svg'
 
 export default function Home() {
   const FADE_DOWN_ANIMATION_VARIANTS = {
@@ -14,8 +16,10 @@ export default function Home() {
   const router = useRouter();
   return (
     <main className="flex flex-col min-h-screen min-w-screen font-sans justify-center items-center gap-24">
-      <section className="w-full flex flex-col justify-center items-center min-h-screen px-8">
+      {/* home  */}
+      <section className="w-full flex flex-col  min-h-screen justify-center items-center px-8">
         <motion.div
+          className="md:w-[60%] w-full flex flex-col gap-4 justify-center items-center"
           initial="hidden"
           animate="show"
           viewport={{ once: true }}
@@ -27,11 +31,10 @@ export default function Home() {
               },
             },
           }}
-          className="w-full flex flex-col gap-4 justify-center items-center md:[60%]"
         >
           <a
             href="#"
-            className="bg-teal-900/30 border border-teal-600/40 text-neutral-50 px-3 py-2 rounded-full flex items-center self-start lg:self-center gap-4 hover:border-teal-500/40 duration-300 ease-out"
+            className="bg-teal-900/30 border border-teal-600 text-neutral-50 px-2 py-2 rounded-full flex items-center self-start lg:self-center gap-4 justify-center cursor-pointer hover:border-teal-500/40 duration-300 ease-out"
           >
             <p>Halaman Utama, Perusahaan</p>
             <svg
@@ -46,30 +49,26 @@ export default function Home() {
               />
             </svg>
           </a>
-          <motion.h1
-            className="text-transparent lg:text-center bg-gradient-to-b from-neutral-50 from-10% via-teal-200 via-70% to-95% to-emerald-400 bg-clip-text leading-none lg:w-2/3"
-            variants={FADE_DOWN_ANIMATION_VARIANTS}
-          >
-           Internet dengan kecepatan sangat kencang dan murah hanya ada di netBus
+          <motion.h1 className="text-transparent lg:text-center bg-gradient-to-b from-neutral-50 from-10% via-teal-200 via-70% to-95% to-emerald-400 bg-clip-text leading-none"
+           variants={FADE_DOWN_ANIMATION_VARIANTS}>
+             Internet kencang dan murah hanya ada di netBus
           </motion.h1>
-          <motion.p
-            className="text-neutral-200 text-xl lg:text-center font-[450] w-full lg:w-3/4"
-            variants={FADE_DOWN_ANIMATION_VARIANTS}
-          >
-            
+          <motion.p className="text-neutral-200 text-xl lg:text-center font-[450] w-full lg:w-3/4"
+           variants={FADE_DOWN_ANIMATION_VARIANTS}>
+           Internet dengan kecepatan 1Gbps adalah keunggulan dari kami. Dengan pengawai yang siap 24 jam untuk melayani kendala dari Internet di lampung.
           </motion.p>
-          <motion.div
-            className="flex gap-4 mt-4 lg:mt-0 justify-start lg:justify-center lg:items-center w-full"
-            variants={FADE_DOWN_ANIMATION_VARIANTS}
-          >
+          <motion.div className="flex gap-4 mt-4 lg:mt-0 justify-start lg:justify-center lg:items-center w-full"
+           variants={FADE_DOWN_ANIMATION_VARIANTS}>
             <button
-              className="p-3 rounded-lg bg-gradient-to-br from-teal-400 to-emerald-400 border text-neutral-950 font-[500] duration-300 ease-in-out"
-              onClick={() => router.push("/waitlish")}
+              className="p-3 rounded-lg bg-gradient-to-br from-teal-400 to-emerald-400 border text-neutral-950 font-[500] border-neutral-50 hover:shadow-lg hover:shadow-emerald-400 duration-300 ease-in-out"
+              onClick={() => {
+                router.push("/waitlist");
+              }}
             >
-              Join the waithlist
+              Join to waithlist
             </button>
             <a
-              className="relative p-3 rounded-lg bg-teal-950/90 text-neutral-50 font-[500] group"
+              className="relative p-3 rounded-lg bg-teal-950/90 text-neutral-50 font-[500] group nimate-rotate-gradient border border-neutral-400"
               href="#features"
             >
               Learn more
@@ -78,7 +77,7 @@ export default function Home() {
           </motion.div>
         </motion.div>
       </section>
-
+      
       {/* section Product  */}
       <section
         className="w-full flex flex-col justify-center items-center px-8 lg:px-32 min-h-screen gap-16"
@@ -86,7 +85,7 @@ export default function Home() {
       >
         <div className="flex flex-col justify-center items-center gap-4">
           <h2 className="lg:w-1/2 w-full text-center text-neutral-50 leading-none lg:mt-16">
-            product sangat keren pada jamannya
+            keunggulan yang tersedia pada perusahaan kami <br />
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="44"
@@ -101,60 +100,26 @@ export default function Home() {
             </svg>
           </h2>
           <p className="text-neutral-200 font-[450] text-xl w-full lg:w-2/3 text-center">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, ab
-            architecto totam nesciunt quis adipisci itaque quod unde assumenda
-            libero.
+          kamu bersedia untuk memberikan pelayanan yang maksimal dengan beberapa keunggulan yang bisa kami berikan pada pelanggan.
           </p>
         </div>
         <div className="flex flex-col w-full gap-8">
-          <div className="flex flex-col lg:flex-row h-[800px] lg:h-[400px] gap-8">
-            <div className="h-full flex flex-col w-full lg:w-[60%] border border-teal-600/40 rounded-2xl backdrop-blur-2xl drop-shadow-2xl bg-teal-900/30 relative overflow-hidden p-4 lg:p-8">
-              <div className="w-full flex flex-col justify-center items-center gap-2 self-end">
-                <h3 className="text-neutral-50 font-semibold text-[1.5rem] lg:text-[2rem] text-center leading-none">
-                  Lorem ipsum dolor sit amet.
+          <div className="flex flex-col lg:grid lg:grid-cols-2 h-[800px]  gap-8">
+            {Keunggulan.map((item : any , i : number)=>(
+              <div key={i} className="h-full flex flex-col w-full  border border-teal-600/40 rounded-2xl backdrop-blur-2xl drop-shadow-2xl bg-teal-900/30 relative overflow-hidden p-4 lg:p-8">
+              <div className="w-full  flex flex-col justify-center items-center gap-2  self-end">
+                <h3 className="text-neutral-50 pb-3 font-semibold text-[1.5rem] lg:text-[2rem] text-center leading-none">
+                  {item.title}
                 </h3>
                 <p className="text-neutral-200 font-[450] text-lg text-center lg:w-2/3 leading-tight">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Quos, incidunt?
+                  {item.deskripsi}
                 </p>
+                <Image alt="" src={item.icon} width={300} height={300} />
               </div>
             </div>
-            <div className="h-full flex flex-col w-full lg:w-[60%] border border-teal-600/40 rounded-2xl backdrop-blur-2xl drop-shadow-2xl bg-teal-900/30 relative overflow-hidden p-4 lg:p-8">
-              <div className="w-full flex flex-col justify-center items-center gap-2 self-end">
-                <h3 className="text-neutral-50 font-semibold text-[1.5rem] lg:text-[2rem] text-center leading-none">
-                  Lorem ipsum dolor sit amet.
-                </h3>
-                <p className="text-neutral-200 font-[450] text-lg text-center lg:w-2/3 leading-tight">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Quos, incidunt?
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
-          <div className="flex flex-col lg:flex-row h-[800px] lg:h-[400px] gap-8">
-            <div className="h-full flex flex-col w-full lg:w-[60%] border border-teal-600/40 rounded-2xl backdrop-blur-2xl drop-shadow-2xl bg-teal-900/30 relative overflow-hidden p-4 lg:p-8">
-              <div className="w-full flex flex-col justify-center items-center gap-2 self-end">
-                <h3 className="text-neutral-50 font-semibold text-[1.5rem] lg:text-[2rem] text-center leading-none">
-                  Lorem ipsum dolor sit amet.
-                </h3>
-                <p className="text-neutral-200 font-[450] text-lg text-center lg:w-2/3 leading-tight">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Quos, incidunt?
-                </p>
-              </div>
-            </div>
-            <div className="h-full flex flex-col w-full lg:w-[60%] border border-teal-600/40 rounded-2xl backdrop-blur-2xl drop-shadow-2xl bg-teal-900/30 relative overflow-hidden p-4 lg:p-8">
-              <div className="w-full flex flex-col justify-center items-center gap-2 self-end">
-                <h3 className="text-neutral-50 font-semibold text-[1.5rem] lg:text-[2rem] text-center leading-none">
-                  Lorem ipsum dolor sit amet.
-                </h3>
-                <p className="text-neutral-200 font-[450] text-lg text-center lg:w-2/3 leading-tight">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Quos, incidunt?
-                </p>
-              </div>
-            </div>
-          </div>
+
         </div>
       </section>
       {/* pembayaran  */}
@@ -164,7 +129,7 @@ export default function Home() {
       >
         <div className="flex flex-col justify-center items-center gap-4">
           <h2 className="lg:w-1/2 text-center text-neutral-50 leading-none lg:mt-16">
-            Harga yang tidak merugikan anda{" "}
+            Harga peningkatan layanan{" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="44"
@@ -179,9 +144,7 @@ export default function Home() {
             </svg>
           </h2>
           <p className="text-neutral-200 font-[450] text-xl lg:w-2/3 text-center">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Praesentium adipisci quos, distinctio consectetur illo obcaecati
-            alias dolorum fuga eligendi incidunt.
+            berikut untuk peningkatan layanan yang bisa dilakukan oleh anda, silakan pilih layanan yang akan di gunakan
           </p>
         </div>
         <div className="w-full grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8">
@@ -203,7 +166,7 @@ export default function Home() {
         <div className="flex flex-col justify-center items-center gap-4">
           <h2 className="lg:w-1/2 text-center text-neutral-50 leading-none lg:mt-16">
             {" "}
-            Still not convinced? Lets talk{" "}
+            Anda kurang yakin ?{" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="44"
@@ -219,9 +182,7 @@ export default function Home() {
           </h2>
           <p className="text-neutral-200 font-[450] text-xl lg:w-2/3 text-center">
             {" "}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-            itaque adipisci, sequi cum quasi assumenda doloremque tempora quod
-            quidem dolor.
+           jika anda merasa kurang yakin dengan pelayanan atau jasa kami. silakan untuk berbincang dengan kami dan kami akan jelaskan kelebihan kami dengan user yang sudah merata khususnya di provinsi lampung
           </p>
         </div>
         <ContactFrom />

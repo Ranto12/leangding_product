@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="w-full border-t border-teal-600/60 p-8 lg:px-32 gap-8 flex flex-col md:flex-row justify-between">
       <div className="flex flex-col gap-8 justify-between h-auto">
         <h3 className="text-neutral-50 font-normal break-all">
-          Copyright &copy; Logo. All right reserved.
+          Copyright &copy; ranto . All right reserved.
         </h3>
         <div className="flex gap-4 text-neutral-100/80">
           <a
@@ -47,56 +47,21 @@ const Footer = () => {
             <h3 className="text-neutral-50 font-normal">App</h3>
             <ul className="list-none text-neutral-300/80 space-y-2">
                 <li>
-                    <a href="" className="hover:text-neutral-100 ease-in-out duration-200">Cek</a>
+                    <a href="" className="hover:text-neutral-100 ease-in-out duration-200">facebook</a>
                 </li>
                 <li>
-                    <a href="" className="hover:text-neutral-100 ease-in-out duration-200">Toko</a>
+                    <a href="" className="hover:text-neutral-100 ease-in-out duration-200">instagram</a>
                 </li>
                 <li>
-                    <a href="" className="hover:text-neutral-100 ease-in-out duration-200">Sebelah</a>
+                    <a href="" className="hover:text-neutral-100 ease-in-out duration-200">youtube</a>
                 </li>
                 <li>
-                    <a href="" className="hover:text-neutral-100 ease-in-out duration-200">YGY</a>
+                    <a href="" className="hover:text-neutral-100 ease-in-out duration-200">whatsapp</a>
                 </li>
             </ul>
         </div>
-        <div className="flex flex-col gap-2">
-            <h3 className="text-neutral-50 font-normal">App</h3>
-            <ul className="list-none text-neutral-300/80 space-y-2">
-                <li>
-                    <a href="" className="hover:text-neutral-100 ease-in-out duration-200">Cek</a>
-                </li>
-                <li>
-                    <a href="" className="hover:text-neutral-100 ease-in-out duration-200">Toko</a>
-                </li>
-                <li>
-                    <a href="" className="hover:text-neutral-100 ease-in-out duration-200">Sebelah</a>
-                </li>
-                <li>
-                    <a href="" className="hover:text-neutral-100 ease-in-out duration-200">YGY</a>
-                </li>
-                <li>
-                    <a href="" className="hover:text-neutral-100 ease-in-out duration-200">YGY</a>
-                </li>
-            </ul>
-        </div>
-        <div className="flex flex-col gap-2">
-            <h3 className="text-neutral-50 font-normal">Lorem, ipsum.</h3>
-            <ul className="list-none text-neutral-300/80 space-y-2">
-                <li>
-                    <a href="" className="hover:text-neutral-100 ease-in-out duration-200">Cek</a>
-                </li>
-                <li>
-                    <a href="" className="hover:text-neutral-100 ease-in-out duration-200">Toko</a>
-                </li>
-                <li>
-                    <a href="" className="hover:text-neutral-100 ease-in-out duration-200">Sebelah</a>
-                </li>
-                <li>
-                    <a href="" className="hover:text-neutral-100 ease-in-out duration-200">YGY</a>
-                </li>
-            </ul>
-        </div>
+       
+       
       </div>
     </footer>
   );

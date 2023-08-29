@@ -1,7 +1,7 @@
 export const pricings = [
     {
-      title: "Free",
-      price: "0$ / Month",
+      title: "1 Mb",
+      price: "50.000 / bulan",
       perks: [
         "Lorem ipsum dolor.",
         "Lorem ipsum dolor.",
@@ -13,8 +13,8 @@ export const pricings = [
       ],
     },
     {
-      title: "Plus",
-      price: "10$ / Month",
+      title: "5 Mb",
+      price: "200.000 / Month",
       perks: [
         "Lorem ipsum dolor.",
         "Lorem ipsum dolor.",
@@ -26,8 +26,8 @@ export const pricings = [
       ],
     },
     {
-      title: "Enterprise",
-      price: "Contact Us",
+      title: "10 Mb ",
+      price: "340.000 / bulan",
       perks: [
         "Lorem ipsum dolor.",
         "Lorem ipsum dolor.",
